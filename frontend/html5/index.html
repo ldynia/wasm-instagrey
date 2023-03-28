@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback</title>
+</head>
+<script type="module">
+  // Web Assembly
+  import init, { greet } from "./pkg/backend.js";
+  init().then(() => {
+    greet("WebAssembly");
+  });
+</script>
+<body>
+  <form action="" method="post">
+    <input type="text" name="feedback" id="feedback" alt="feedback">
+    <button type="submit" id="btnSubmit">Submit</button>
+  </form>
+</body>
+<script>
+  document.getElementById('btnSubmit').addEventListener('click', function(event) {
+    event.preventDefault();
+    let feedback = document.getElementById('feedback').value;
+    alert(feedback);
+  });
+</script>
+</html>

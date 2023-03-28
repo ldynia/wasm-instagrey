@@ -1,0 +1,14 @@
+[package]
+authors = ["Lukasz Dynowski"]
+description = "Instagrey filter written with wasm-pack"
+edition = "2021"
+license = "MIT/Apache-2.0"
+name = "backend"
+repository = "https://github.com/ldynia/wasm-instagrey"
+version = "0.1.0"
+
+[dependencies]
+wasm-bindgen = "0.2.84"
+
+[lib]
+crate-type = ["cdylib"]
